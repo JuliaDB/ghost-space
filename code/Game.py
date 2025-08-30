@@ -1,4 +1,4 @@
-from code.Const import EnvEnum
+from code.Const import EnvEnum, MenuEnum
 from code.Menu import Menu
 import pygame
 
@@ -9,6 +9,14 @@ class Game:
 
     def run(self):
        while True:
-           menu = Menu(self.window)
-           menu_return = menu.run()
-           print(menu_return)
+            menu = Menu(self.window)
+            menu_return = menu.run()
+
+            if menu_return == MenuEnum.NEW_GAME:
+                print("Starting New Game...")
+            elif menu_return == MenuEnum.SCORE:
+                print("Showing Scores...")
+            elif menu_return == MenuEnum.QUIT:
+                print("Quitting Game...")
+                pygame.quit()
+                quit()
