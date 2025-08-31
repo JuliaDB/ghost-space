@@ -1,7 +1,8 @@
 import pygame.image
-from code.Const import EnvEnum, ColorEnum, MenuEnum
+from core.Const import EnvEnum, ColorEnum, MenuEnum
 from pygame import Surface, Rect
 from pygame.font import Font
+
 
 class Menu:
     def __init__(self, window):
@@ -16,8 +17,8 @@ class Menu:
 
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
-            WIN_WIDTH_CENTER = EnvEnum.WINDOW_SIZE[0] / 2
-            POSITION_INIT_TITLE = (WIN_WIDTH_CENTER, 70)
+            win_width_center = EnvEnum.WINDOW_SIZE[0] / 2
+            POSITION_INIT_TITLE = (win_width_center, 70)
 
             # Título do jogo
             for word in EnvEnum.NAME_GAME.split():
@@ -30,7 +31,7 @@ class Menu:
 
             for i, opcao in enumerate(options):
                 color_text = ColorEnum.YELLOW.value if opcao == menu_option else ColorEnum.WHITE.value
-                self.menu_text(20, opcao.value, color_text, (WIN_WIDTH_CENTER, 200 + 25 * i))
+                self.menu_text(20, opcao.value, color_text, (win_width_center, 200 + 25 * i))
 
             pygame.display.flip()
 
