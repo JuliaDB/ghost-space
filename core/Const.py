@@ -12,7 +12,6 @@ class ColorEnum(Enum):
 
 class MenuEnum(str, Enum):
     NEW_GAME = "New Game"
-    SCORE = "Score"
     QUIT = "Quit"
 
 
@@ -52,10 +51,8 @@ class EntityEnum:
         'Level2Bg2': 999,
         'Level2Bg3': 999,
         'Level2Bg4': 999,
-        'Player1': 300,
+        'Player1': 200,
         'Player1Shot': 1,
-        'Player2': 300,
-        'Player2Shot': 1,
         'Enemy1': 50,
         'Enemy1Shot': 1,
         'Enemy2': 60,
@@ -140,4 +137,4 @@ class EnvEnum:
     MENU_OPTION_DEFAULT = MenuEnum.NEW_GAME
     SPAWN_TIME = 4000
     TIMEOUT_STEP = 100  # 100ms
-    TIMEOUT_LEVEL = 60000  # 20s
+    TIMEOUT_LEVEL = 60000  # 60s

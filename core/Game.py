@@ -26,9 +26,6 @@ class Game:
                 #     if level_return:
                 #         score.save(menu_return, player_score)
 
-
-            elif menu_return == MenuEnum.SCORE:
-                print("Showing Scores...")
             elif menu_return == MenuEnum.QUIT:
                 print("Quitting Game...")
                 pygame.quit()

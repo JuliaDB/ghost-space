@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 from core.Const import EntityEnum
-import os
 
 import pygame.image
 
@@ -8,10 +7,6 @@ import pygame.image
 class Entity(ABC):
     def __init__(self, name: str, position: tuple):
         self.name = name
-
-        print(os.getcwd())  # mostra o diretório atual de execução
-        print("dir atual = "+'assets/images/entities/level_1/' + name + '.png')
-
         self.surf = pygame.image.load('./assets/images/entities/level_1/' + name + '.png').convert_alpha()
         self.rect = self.surf.get_rect(left=position[0], top=position[1])
         self.speed = 0
