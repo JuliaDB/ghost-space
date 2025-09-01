@@ -31,7 +31,7 @@ class EntityFactory:
             return Player('Player2', (10, EnvEnum.WINDOW_SIZE[0] / 2 + 30))
 
         elif entity_name == 'Enemy1':
-            return Enemy('Enemy1', (EnvEnum.WINDOW_SIZE[0] + 10, random.randint(40, EnvEnum.WINDOW_SIZE[0] - 40)))
+            return Enemy('Enemy1', (EnvEnum.WINDOW_SIZE[0] + 10, random.randint(40, EnvEnum.WINDOW_SIZE[1] - 40)))
 
         elif entity_name == 'Enemy2':
-            return Enemy('Enemy2', (EnvEnum.WINDOW_SIZE[0] + 10, random.randint(40, EnvEnum.WINDOW_SIZE[0] - 40)))
+            return Enemy('Enemy2', (EnvEnum.WINDOW_SIZE[0] + 10, random.randint(40, EnvEnum.WINDOW_SIZE[1] - 40)))
